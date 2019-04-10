@@ -1,0 +1,23 @@
+.m-container {
+    background: aqua;
+}
+
+.t-l-container {
+    background: pink;
+}
+
+.t-r-container {
+    background: yellow;
+}
+
+.b-container {
+    background: aquamarine;
+}
+
+.bl-container {
+    background: greenyellow;
+}
+
+.br-container {
+    background: fuchsia;
+}

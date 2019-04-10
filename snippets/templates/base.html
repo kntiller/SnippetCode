@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,23 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SnippetCodes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/styles.css' %}">
     <script src="main.js"></script>
 </head>
 <body>
-<div class="main-container">
-    <div class="header-container">
-        <p>Header Container</p>
-    </div>
-    <div class="bottom-container">
-        <div class="bottomleft-container">
-            <p>bottomleft container</p>
-        </div>
-        <div class="bottomright-container">
-            <p>bottomright container</p>
-        </div>
-    </div>
-</div>
+        <div class="m-container">
+            <header class="header dark-gray bg-light-red">
+                <div class="t-l-container">
+                    <h1>Kasey's Snippets</h1>
+                </div>
+                <div class="t-r-container">
+                    {% if request.user.is_authenticated %}
+                    <a  href="">Logout</a> | 
+                    <a  href="">username</a>
+                    {% else %}
+                    <a  href="">Login</a> | 
+                    <a  href="">Register</a>
+                    {% endif %}
+                </div>
+            </header>
+            {% block sidebar %}
+            <div class="b-container">
+                <div class="bl-container">
+                    <div class="row2">
+                        <div class="col-sm-2">
+                            <ul>
+                                <li><a  href=""><strong>Snippets </strong></a></li>
+                                <li><a  href=""><strong>Folders </strong></a></li>
+                                <li><a  href=""><strong>Links </strong></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row3">
+                        <div class="col-sm-2">
+                            <ul class="sidelist">
+                                {% if user.is_authenticated %}
+                                <li><a href="">My Favorites</a></li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                    {% if user.is_staff %}
+                    <hr />
+                    <div class="row4">
+                        <div class="col-sm-2">
+                            <ul class="sidelist">
+                                <li><a href="">Admin</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endblock %}
     
-</body>
+                <div class="br-container">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
