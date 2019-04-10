@@ -1,23 +1,82 @@
 .m-container {
-    background: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    color: #111111;
+}
+
+.header-link {
+    font-family: 'Cinzel';
+    font-size: 1.20rem;
+    font-weight: 900;
+    text-shadow: -.75px .75px #838989;
+}
+
+.header {
+    background-color: aqua;
+    padding: 1rem;
 }
 
 .t-l-container {
-    background: pink;
+    width: 75%;
+    background-color: yellow;
+    text-align: left;
+    line-height: 100px;
 }
 
 .t-r-container {
-    background: yellow;
+    width: 25%;
+    background-color: orange;
+    text-align: center;
+    line-height: 150px;
 }
 
 .b-container {
-    background: aquamarine;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
+    background-color: aquamarine;
 }
 
 .bl-container {
-    background: greenyellow;
+    height: auto;
+    width: 15%;
+    background:
+        linear-gradient(
+            rgba(255, 198, 189, 0.75), 
+            rgba(255, 255, 255, 0.25));
+    background-size: cover;
+    /* background-color: purple; */
 }
 
 .br-container {
-    background: fuchsia;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: auto;
+    padding: 1rem;
+    background:
+        linear-gradient(
+            rgba(248, 248, 248, 0.75), 
+            rgba(255, 255, 255, 0.25));
 }
+
+.brt-container {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
