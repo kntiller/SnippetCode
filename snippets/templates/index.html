@@ -4,12 +4,15 @@
 {% block content %}
 
 <div>
+    {% if user.is_authenticated %}
+    {{user}}
     <div class="languages">
-
+        {% for language in languages.all %}{{language}}{% endfor %}
     </div>
     <div class="folders">
-
+        {% for folder in folders.all %}{{folder}}{% endfor %}
     </div>
+    {% endif %}
 </div>
 
 {% endblock %}
