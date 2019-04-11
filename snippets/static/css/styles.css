@@ -6,8 +6,10 @@
 header {
     display: flex;
     flex-direction: row;
-    color: #111111;
+    color: #D09A58;
+    text-shadow: -.75px .75px #D4C675;
     padding: 1rem;
+    background-color: #3C3C45;
 }
 
 .t-l-container {
@@ -23,16 +25,14 @@ header {
 }
 
 .header-title {
-    font-family: 'Cairo';
-    font-weight: 900;
-    text-shadow: -.75px .75px #838989;
+    font-family: 'Handlee';
 }
 
 .header-link {
-    font-family: 'Cairo';
+    font-family: 'Raleway';
     font-size: 1.20rem;
-    font-weight: 900;
-    text-shadow: -.75px .75px #838989;
+    color: #D09A58;
+    text-shadow: .75px 1px #D4C675;
 }
 
 .b-container {
@@ -44,10 +44,10 @@ header {
 .bl-container {
     height: auto;
     width: 15%;
-    /* background:
+    background:
         linear-gradient(
-            rgba(255, 198, 189, 0.75), 
-            rgba(255, 255, 255, 0.25)); */
+            rgba(60, 60, 69, 0.75), 
+            rgba(171, 71, 71, 0.25));
     background-size: cover;
 }
 
@@ -57,10 +57,10 @@ header {
     width: 85%;
     height: auto;
     padding: 1rem;
-    /* background:
+    background:
         linear-gradient(
             rgba(248, 248, 248, 0.75), 
-            rgba(255, 255, 255, 0.25)); */
+            rgba(255, 255, 255, 0.25));
 }
 
 .brt-container {
@@ -74,7 +74,7 @@ li {
 
 a {
     text-decoration: none;
+    color: #FFE0B2;
+    text-shadow: .75px 1px #7E3E3E;
 }
-
-
 

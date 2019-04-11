@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     # app
     'snippets',
+    'snippets.templatetags',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,4 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = '/'
 ACCOUNT_ACTIVATION_DAYS = 7
 EMAIL_BACKEND = 'Django.snippets.mail.backends.console.EmailBackend'
+AUTH_USER_MODEL = 'snippets.User'
