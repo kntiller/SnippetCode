@@ -5,12 +5,23 @@
 
 <div>
     {% if user.is_authenticated %}
-    {{user}}
+
+    
     <div class="languages">
-        {% for language in languages.all %}{{language}}{% endfor %}
+        <h3>Languages</h3>
+        {% if language in languages.all %}
+        <div>{% for language in languages.all %}{{language}}{% endfor %}</div>
+        {% else %}
+        <p>No languages available at this time.</p>
+        {% endif %}
     </div>
     <div class="folders">
-        {% for folder in folders.all %}{{folder}}{% endfor %}
+        <h3>Folders <i class="fas fa-plus" id="plus-sign"></i></h3>
+        {% if folder in folders.all %}
+        <div>{% for folder in folders.all %}{{folder}}{% endfor %}</div>
+        {% else %}
+        <p>No folders available at this time.</p>
+        {% endif %}
     </div>
     {% endif %}
 </div>
