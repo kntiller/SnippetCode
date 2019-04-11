@@ -42,12 +42,12 @@ header {
 }
 
 .bl-container {
-    height: auto;
+    height: 100%;
     width: 15%;
     background:
         linear-gradient(
             rgba(60, 60, 69, 0.75), 
-            rgba(171, 71, 71, 0.25));
+            rgba(255, 255, 255, 0.25));
     background-size: cover;
 }
 
@@ -55,17 +55,8 @@ header {
     display: flex;
     flex-direction: column;
     width: 85%;
-    height: auto;
+    height: 100%;
     padding: 1rem;
-    background:
-        linear-gradient(
-            rgba(248, 248, 248, 0.75), 
-            rgba(255, 255, 255, 0.25));
-}
-
-.brt-container {
-    padding: 1rem;
-    font-size: 1.5rem;
 }
 
 li {
@@ -77,4 +68,5 @@ a {
     color: #FFE0B2;
     text-shadow: .75px 1px #7E3E3E;
 }
+
 

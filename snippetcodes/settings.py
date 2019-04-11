@@ -144,3 +144,7 @@ LOGIN_REDIRECT_URL = '/'
 ACCOUNT_ACTIVATION_DAYS = 7
 EMAIL_BACKEND = 'Django.snippets.mail.backends.console.EmailBackend'
 AUTH_USER_MODEL = 'snippets.User'
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+]
