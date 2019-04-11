@@ -69,4 +69,9 @@ a {
     text-shadow: .75px 1px #7E3E3E;
 }
 
+#plus-sign {
+    font-size: .5rem;
+    color: gray;
+}
+
 
