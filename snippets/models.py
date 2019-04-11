@@ -46,7 +46,7 @@ class Language(models.Model):
             super(Language, self).save(*args, **kwargs)
 
     def __str__(self):
-        return self.title.upper()
+        return self.name.upper()
 
 
 class Folder(models.Model):
