@@ -31,8 +31,8 @@ header {
 .header-link {
     font-family: 'Raleway';
     font-size: 1.20rem;
-    color: #D09A58;
-    text-shadow: .75px 1px #D4C675;
+    color: #D4C675;
+    text-shadow: .75px 1px #D09A58;
 }
 
 .b-container {
@@ -42,13 +42,14 @@ header {
 }
 
 .bl-container {
-    height: 100%;
+    height: auto;
     width: 15%;
     background:
         linear-gradient(
-            rgba(60, 60, 69, 0.75), 
-            rgba(255, 255, 255, 0.25));
+            rgba(60, 60, 69, 0.755), 
+            rgba(255, 255, 255, 0.646));
     background-size: cover;
+    font-family: 'Raleway';
 }
 
 .br-container {
@@ -66,12 +67,70 @@ li {
 a {
     text-decoration: none;
     color: #FFE0B2;
-    text-shadow: .75px 1px #7E3E3E;
+    text-shadow: .75px 1px #7E3E3E,
+    2px 2px 3px rgba(0, 0, 0, 0.94), 
+    3px 3px 6px rgba(0, 0, 0, 0.892);
+}
+
+.header-link:hover {
+    transform: scale(1.10);
+}
+
+.language-header, .folder-header {
+    display: flex;
+    flex-flow: wrap;
+    font-family: 'Raleway';
+    text-shadow:  1.5px 1.5px 3px rgba(200, 200, 200, 0.872)
 }
 
 #plus-sign {
-    font-size: .5rem;
-    color: gray;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    transition: all .2s ease-in-out;
 }
+
+#plus-sign:hover { 
+    transform: scale(2.1); 
+}
+
+button {
+    margin-left: 5px;
+    border: none;
+    color: gray;
+    text-shadow: .75px 1px #7E3E3E;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+    transform: scale(1.1);
+    text-shadow:  1.5px 1.5px 3px rgba(254, 217, 7, 0.872),2px 2px 4px rgb(255, 106, 51); 
+}
+
+.folder, .language {
+    margin: 2rem;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #3C8284;
+    color: white;
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px rgba(60, 60, 69, 0.926); 
+    border: solid 1px #045F6C;
+    font-family: 'Handlee';
+}
+
+.folder:hover, .language:hover {
+    transform: scale(1.10);
+}
+
+
 
 

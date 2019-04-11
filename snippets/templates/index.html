@@ -8,17 +8,23 @@
 
     
     <div class="languages">
-        <h3>Languages</h3>
-        {% if language in languages.all %}
-        <div>{% for language in languages.all %}{{language}}{% endfor %}</div>
+        <div class="language-header">
+            <h3>Languages</h3>
+            <button type="submit"><i class="fas fa-plus" id="plus-sign"></i></button>
+        </div>
+        {% if languages %}
+        <a href=""><div class="language">{% for language in languages.all %}{{language}}{% endfor %}</div></a>
         {% else %}
         <p>No languages available at this time.</p>
         {% endif %}
     </div>
     <div class="folders">
-        <h3>Folders <i class="fas fa-plus" id="plus-sign"></i></h3>
-        {% if folder in folders.all %}
-        <div>{% for folder in folders.all %}{{folder}}{% endfor %}</div>
+        <div class="folder-header">
+            <h3>Folders</h3>
+            <button type="submit"><i class="fas fa-plus" id="plus-sign"></i></button>
+        </div>
+        {% if folders %}
+        <a href=""><div class="folder">{% for folder in folders.all %}{{folder}}{% endfor %}</div></a>
         {% else %}
         <p>No folders available at this time.</p>
         {% endif %}
