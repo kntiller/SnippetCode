@@ -6,14 +6,16 @@
 <div>
     {% if user.is_authenticated %}
 
-    
+
     <div class="languages">
         <div class="language-header">
             <h3>Languages</h3>
-            <button type="submit"><i class="fas fa-plus" id="plus-sign"></i></button>
+           <button class="language-button" type="submit"><i class="fas fa-plus" id="plus-sign-l"></i></button>
         </div>
         {% if languages %}
-        <a href=""><div class="language">{% for language in languages.all %}{{language}}{% endfor %}</div></a>
+        <a href="">
+            <div class="language">{% for language in languages.all %}{{language}}{% endfor %}</div>
+        </a>
         {% else %}
         <p>No languages available at this time.</p>
         {% endif %}
@@ -21,13 +23,19 @@
     <div class="folders">
         <div class="folder-header">
             <h3>Folders</h3>
-            <button type="submit"><i class="fas fa-plus" id="plus-sign"></i></button>
+            <button class="folder-button"><i class="fas fa-plus" id="plus-sign"></i></button>
         </div>
+        <div class="folder-container">
         {% if folders %}
-        <a href=""><div class="folder">{% for folder in folders.all %}{{folder}}{% endfor %}</div></a>
+        {% for folder in folders.all %}
+        <a href="">
+            <div class="folder">{{folder}}</div>
+        </a>
+        {% endfor %}
         {% else %}
         <p>No folders available at this time.</p>
         {% endif %}
+        </div>
     </div>
     {% endif %}
 </div>

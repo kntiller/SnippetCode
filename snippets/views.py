@@ -46,3 +46,16 @@ def discover_page(request):
 class FolderForm(CreateView):
     model = Folder
     fields = ('title', 'user', 'snippets')
+    success_url = reverse_lazy('snippets')
+
+class SnippetForm(CreateView):
+    model = Snippet
+    fields = ('__all__')
+    exclude = ('slug',)
+    success_url = reverse_lazy('snippets')
+
+class LanguageForm(CreateView):
+    model = Language
+    fields = ('__all__')
+    success_url = reverse_lazy('snippets')
+    
