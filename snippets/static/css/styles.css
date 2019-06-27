@@ -80,7 +80,8 @@ a {
     display: flex;
     flex-flow: wrap;
     font-family: 'Raleway';
-    text-shadow:  1.5px 1.5px 3px rgba(200, 200, 200, 0.872)
+    text-shadow:  1.5px 1.5px 3px rgba(200, 200, 200, 0.872);
+    margin-left: 2rem;
 }
 
 #plus-sign {
@@ -91,6 +92,17 @@ a {
 }
 
 #plus-sign:hover { 
+    transform: scale(2.1); 
+}
+
+#plus-sign-l {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 20px;
+    transition: all .2s ease-in-out;
+}
+
+#plus-sign-l:hover { 
     transform: scale(2.1); 
 }
 
@@ -112,12 +124,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .folder, .language {
     margin: 2rem;
-    width: 40px;
-    height: 25px;
-    line-height: 25px;
+    width: 100px;
+    height: 60px;
     background-color: #3C8284;
     color: white;
-    font-size: 1rem;
+    font-size: 15px;
     padding: 1.5rem;
     text-align: center;
     -moz-box-shadow:    3px 3px 5px 6px #ccc;
@@ -129,6 +140,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 
 .folder:hover, .language:hover {
     transform: scale(1.10);
+}
+
+.folder-container {
+    display: flex;
+    flex-flow: wrap;
 }
 
 
